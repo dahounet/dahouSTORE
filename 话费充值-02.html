@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="style/cz.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script>function test(a){console.log('已收到：'+a);}</script>
+<div class="top">话费充值</div>
+<div class="main">
+	<div class="left">
+		<div class="chanel-wrap">
+			<div class="chanel-page"><!--<iframe src="http://tcc.taobao.com/cc/mobile_charge.htm?css=wt_one_menu" scrolling="auto" ></iframe>--></div>
+			<div class="chanel-caption"><div class="chanel-caption-t"><div class="chanel-caption-b"><a href="#">渠道1：TMALL</a><i class="chanel-stateok">已就绪</i></div></div></div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="chanel-wrap">
+			<div class="chanel-page">
+				<!--<iframe src="http://chongzhi.taobao.com/charge.do?spm=0.0.0.0.i1ONsO&method=charge" scrolling="auto"></iframe>-->
+			</div>
+			<div class="chanel-caption"><div class="chanel-caption-t"><div class="chanel-caption-b"><a href="#">渠道2：淘宝充值平台</a><i class="chanel-stateok">已就绪</i></div></div></div>
+		</div>
+	</div>
+	<div class="czpanel-wrap" style="/*display:none;*/" id="dahouSTORE__czpanel">
+		<div class="czpanel">
+			<div class="czpanel-main">
+				<div class="CZXXpanel-title"><h1>充值信息面板</h1><div class="CZXXpanel-cancel"><a href="javascript:;">放弃此次充值</a></div></div>
+				<div class="autochoose-wrap">
+					<div class="autochoose">
+						<h1 class="autochoose-caption">选择充值渠道</h1>
+						<ul class="autochoose-result">
+							<li>
+								<div class="result-wrap">
+									<h2>1: TMALL</h2>
+									<span class="price-forecast">预计为</span>
+									<div class="price-exampleinfo">
+										<div class="price-exampleinfo-value"><span>981.50</span></div>
+										<div class="price-exampleinfo-diff"><span class="ok">低10.01</span></div>
+									</div>
+									<div class="price">1956.3</div>
+									<!--<div class="process">（获取中...）</div>
+									<div class="error">（获取失败）</div>-->
+								</div>
+								<a href="javascript:;"></a>
+							</li>
+							<li class="autochoose-selected">
+								<div class="result-wrap">
+									<h2>2: CHONG</h2>
+									<div class="price-exampleinfo">
+										<div class="price-exampleinfo-value"><span>998.07</span></div>
+										<div class="price-exampleinfo-diff"><span class="greater">高1.02</span></div>
+									</div>
+									<div class="price">---</div>
+									<!--<div class="process">（获取中）</div>
+									<div class="error">（获取失败）</div>-->
+								</div>
+								<a href="javascript:;"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tmalliframe-wrap" style="display:none;">
+					<div class="tmalliframe">
+						<div class="CZXXpanel-title"><h1>渠道1：TMALL - 充值面板</h1><div class="CZXXpanel-cancel"><a href="javascript:;">更换充值渠道</a></div></div>
+						<div class="tmalliframe-page"><iframe src="http://tcc.taobao.com/cc/mobile_charge.htm?css=wt_one_menu" scrolling="auto" id="tmalliframe"></iframe></div>
+					</div>
+				</div>
+				<div class="czpanel-list-wrap">
+					<ul class="czpanel-list">
+						<li>
+							<div class="list-l">充值号码：</div>
+							<div class="list-r"><b class="cz-number">---</b></div>
+							<div class="num-zone">---</div>
+						</li>
+						<li>
+							<div class="list-l">充值面值：</div>
+							<div class="list-r"><b class="cz-parvalue">---</b>元</div>
+						</li>
+						<li>
+							<div class="list-l">收银：</div>
+							<div class="list-r"><input type="text" class="cz-receipt" />元</div>
+						</li>
+						<li>
+							<div class="confirm-btn"><button>确定充值</button></div>
+						</li>
+					</ul>
+				</div>
+				<div class="orderinfo-wrap">
+					<div class="orderinfo">
+						<ul class="orderinfo-list">
+							<li>
+								<div class="orderinfo-list-l">充值号码：</div>
+								<div class="orderinfo-list-r"><b class="orderinfo-number">139-8672-8679</b></div>
+							</li>
+							<li>
+								<div class="orderinfo-list-l">&nbsp;</div>
+								<div class="orderinfo-list-r">湖北移动</div>
+							</li>
+							<li>
+								<div class="orderinfo-list-l">&nbsp;</div>
+								<div class="orderinfo-list-r">中国移动话费充值</div>
+							</li>
+							<li>
+								<div class="orderinfo-list-l">充值面值：</div>
+								<div class="orderinfo-list-r"><span class="orderinfo-list-me">50</span>元</div>
+							</li>
+							<li>
+								<div class="orderinfo-list-l">订单号：</div>
+								<div class="orderinfo-list-r"><a href="#">10001</a></div>
+							</li>
+							<li>
+								<div class="orderinfo-list-l">订单时间：</div>
+								<div class="orderinfo-list-r">2013-10-31 12:22:19</div>
+							</li>
+							<li>
+								<div class="orderinfo-list-l">充值状态：</div>
+								<div class="orderinfo-list-r"><span class="orderinfo-orderstate01">尚未充值</span><span class="orderinfo-autocapture">自动监测中...[5]</span><!--<span class="orderinfo-orderstate02">已完成充值</span>--><button class="orderinfo-manualset">手动设为已充值</button></div>
+							</li>
+						</ul>
+						<div class="checkout-wrap">
+							<form name="checkout" method="post">
+							<h1 class="checkout-cap">结账信息</h1>
+							<ul class="checkout">
+								<li class="checkout-discount">
+									<div class="checkout-l">优惠金额：</div>
+									<div class="checkout-r"><input type="text" value="0.00" />元</div>
+								</li>
+								<li class="checkout-needpay">
+									<div class="checkout-l">应支付：</div>
+									<div class="checkout-r"><span>0.00</span>元</div>
+								</li>
+								<li class="checkout-receipts">
+									<div class="checkout-l">收银：</div>
+									<div class="checkout-r"><input type="text" value="0.00" />元</div>
+								</li>
+								<li class="checkout-change">
+									<div class="checkout-l">找零：</div>
+									<div class="checkout-r"><span>0.00</span>元</div>
+								</li>
+								<li class="checkout-orderremark">
+									<div class="checkout-l">备注：</div>
+									<div class="checkout-r"><textarea></textarea></div>
+								</li>
+							</ul>
+							</form>
+						</div>
+						<div class="orderctrl">
+							<div class="orderctrl-confirm"><button>确认订单信息</button></div>
+							<div class="orderctrl-print"><button>打印订单</button></div>
+						</div>
+					</div>
+			</div>
+			</div>
+		</div>
+		<div class="czpanel-bg"></div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="style/common.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="main">
+	<div class="main-top">大猴STORE 管理系统 V0.1</div>
+	<div class="main-left-wrap">
+		<div class="main-left">
+			<h1 class="nav-top"><a href="#">管理系统首页</a></h1>
+			<dl class="nav-list">
+				<dt>订单</dt>
+				<dd><a href="#" class="curr">添加新订单</a></dd>
+				<dd><a href="#">订单查询与修改</a></dd>
+				<dd><a href="#">订单操作日志</a></dd>
+				<dt>库存</dt>
+				<dd><a href="#">库存状态查询</a></dd>
+				<dd><a href="#">库存数据修改</a></dd>
+				<dd><a href="#">出库列表</a></dd>
+				<dd><a href="#">库存操作日志</a></dd>
+				<dt>商品</dt>
+				<dd><a href="#">添加新商品</a></dd>
+				<dd><a href="#">商品列表</a></dd>
+				<dd><a href="#">商品信息查询与修改</a></dd>
+				<dd><a href="#">商品操作日志</a></dd>
+				<dt>打印</dt>
+				<dd><a href="#">小票打印操作日志</a></dd>
+				<dt>全局日志</dt>
+				<dd><a href="#">查看全局日志</a></dd>
+			</dl>
+		</div>
+	</div>
+	<div class="main-right">
+		<div class="tabview">
+			<ul class="tabpanel">
+				<li class="main-right-tab-curr"><a href="#">全部订单</a></li>
+				<li><a href="#">虚拟类订单</a></li>
+				<li><a href="#">服务类订单</a></li>
+				<li><a href="#">实物订单</a></li>
+				<li><a href="#">已关闭订单</a></li>
+			</ul>
+		</div>
+		<div class="logslist-wrap">
+			<div class="logslist">
+				<table class="logslist-tb">
+					<thead>
+						<tr>
+							<th style="width:15%;">日志编号</th>
+							<th style="width:22%;">操作内容</th>
+							<th style="width:33%;">备注</th>
+							<th style="width:15%;">时间</th>
+							<th style="width:15%;">操作者IP</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1001</td>
+							<td>发现充值动作，开始监视</td>
+							<td>网站：www.hb.10086.cn</td>
+							<td>2013-10-30 21:22:39</td>
+							<td>127.001.001.111</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="pagination-wrap">
+					<div class="pagination">
+						<div class="pagination-pages">
+							<div class="pagination-page">
+								<div class="page-wrap page-up"><a href="#" class="page-up-btn">上一页</a></div>
+								<div class="page-wrap">
+									<span class="page-curr">1</span>
+								</div>
+								<div class="page-wrap">
+									<a href="#" class="page">2</a>
+								</div>
+								<div class="page-wrap">
+									<a href="#" class="page">3</a>
+								</div>
+								<div class="page-wrap">
+									<a href="#" class="page">4</a>
+								</div>
+								<div class="page-wrap">
+									<a href="#" class="page">5</a>
+								</div>
+								<span class="page-split">...</span>
+								<div class="page-wrap page-down"><a href="#" class="page-down-btn">下一页</a></div>
+							</div>
+							<div class="pagination-count">共20页，200条日志</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "base.css";
+
+body{
+	font-family:'simsun';
+}
+.main{
+	width:220px;
+	background-color:#E5E5E5;
+	margin:auto;
+}
+.content{
+	font-size:12px;
+	line-height:1.5em;
+}
+.header{
+	margin-bottom:8px;
+	border-bottom:1px solid #333;
+}
+.header h1{
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	line-height:1.8em;
+}
+
+.payinfo{
+	overflow:hidden;
+	margin:5px 0;
+}
+.payinfo h1{
+	width:90%;
+	height:14px;
+	margin:-7px auto 7px;
+	line-height:14px;
+	border-bottom:1px solid #000;
+	text-align:center;
+}
+.payinfo h1 .payinfo-title{
+	position:relative;
+	top:7px;
+}
+.payinfo h1 .payinfo-title span{
+	padding:2px 4px;
+	background-color:#FFF;
+}
+.payinfo-main{
+	overflow:hidden;
+	margin-top:10px;
+}
+.payinfo-l{
+	float:left;
+	width:100px;
+	text-align:center;
+	line-height:22px;
+}
+.payinfo-l-text{
+	width:76%;
+	margin:auto;
+	border-bottom:1px dotted #333;
+}
+.payinfo-l-money{
+	margin-top:4px;
+	line-height:18px;
+}
+.payinfo-l-money span{
+	font-size:16px;
+	font-weight:bold;
+	padding-right:3px;
+}
+.payinfo-r{
+	float:left;
+	width:120px;
+	height:45px;
+}
+.payinfo-r-item{
+	line-height:15px;
+}
+.payinfo-r-item-text{
+	padding-right:3px;
+}
+.payinfo-r-item b{
+	font-size:14px;
+	padding-right:3px;
+}
+.footer{
+	font-family:"simsun";
+	border-top:1px solid #000;
+	margin-top:8px;
+}
+.printtime{
+	text-align:center;
+	font-size:12px;
+	padding-top:1px;
+}
+.storeinfo{
+	font-size:10px;
+	padding:2px 0;
+}
+.storeinfo-address{
+	text-align:center;
+}
+.storeinfo-ad{
+	text-align:center;
+}
+.storeinfo-ad span{
+	margin:0 2px;
+	padding:0 1px;
+	background-color:#000;
+	color:#FFF;
+}
+
+.hf-tb1{
+	width:100%;
+	margin-top:5px;
+}
+.hf-tb1,td{
+	border:none;
+}
+.hf-tb1 .th1{
+	width:40%;
+}
+.hf-tb1 .th2{
+	width:60%;
+}
+.hf-tb1 .td1{
+	text-align:right;
+	font-weight:bold;
+	padding-right:3px;
+}
+.hf-tb1 .td2{
+}

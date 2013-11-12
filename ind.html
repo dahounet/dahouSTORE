@@ -1,0 +1,61 @@
+<html>
+<head>
+</head>
+<body>   <!--也可以放在这里用onload事件来触发frames['main'].test();-->
+<input type=button value=btn onclick="frames['main'].testaa('呵呵');">
+<iframe src="a.html" name=main id="main"></iframe>
+<script>
+setTimeout(function(){
+		var a=document.getElementById('main');
+		a.contentWindow.testaa('000000');
+	},6000);
+	
+
+						$zone="湖北电信";	//获取当前号码的归属地文本
+						$parvalue=500;	//获取当前充值的面值
+						
+						function getQD1forecastprice(p){	//获取湖北移动、全国电信各面值对应的预期的价格
+							var price={	//预期的价格
+									"10086":{	//移动
+										"0716":{	//湖北移动
+											"1":null,
+											"10":9.85,
+											"20":19.7,
+											"30":29.55,
+											"50":49.25,
+											"100":98.5,
+											"200":197.0,
+											"300":295.5,
+											"500":492.5,
+											"1000":null
+											}
+										},
+									"10010":null,	//联通（空）
+									"10000":{	//电信
+										"all":{	//全国电信
+											"1":null,
+											"10":9.8,
+											"20":19.6,
+											"30":29.4,
+											"50":49.0,
+											"100":98.0,
+											"200":196.0,
+											"300":294.0,
+											"500":490.0,
+											"1000":null
+											}
+										}
+								};
+							if(($zone).indexOf('湖北')!=-1&&($zone).indexOf('移动')!=-1){	//如果是湖北移动号码，则
+								return price['10086']['0716'][p];
+							}else if(($zone).indexOf('电信')!=-1){		//如果是全国电信号码，则
+								return price['10000']['all'][p];
+							}else{	//其他号码返回-1
+								return -1;
+							}
+						}
+						alert(getQD1forecastprice($parvalue));
+
+</script>
+</body>
+</html>

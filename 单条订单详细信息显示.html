@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="style/common.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+	<div class="main-top">大猴STORE 管理系统 V0.1</div>
+	<div class="main-left-wrap">
+		<div class="main-left">
+			<h1 class="nav-top"><a href="#">管理系统首页</a></h1>
+			<dl class="nav-list">
+				<dt>订单</dt>
+				<dd><a href="#" class="curr">添加新订单</a></dd>
+				<dd><a href="#">订单查询与修改</a></dd>
+				<dd><a href="#">订单操作日志</a></dd>
+				<dt>库存</dt>
+				<dd><a href="#">库存状态查询</a></dd>
+				<dd><a href="#">库存数据修改</a></dd>
+				<dd><a href="#">出库列表</a></dd>
+				<dd><a href="#">库存操作日志</a></dd>
+				<dt>商品</dt>
+				<dd><a href="#">添加新商品</a></dd>
+				<dd><a href="#">商品列表</a></dd>
+				<dd><a href="#">商品信息查询与修改</a></dd>
+				<dd><a href="#">商品操作日志</a></dd>
+				<dt>打印</dt>
+				<dd><a href="#">小票打印操作日志</a></dd>
+				<dt>全局日志</dt>
+				<dd><a href="#">查看全局日志</a></dd>
+			</dl>
+		</div>
+	</div>
+	<div class="main-right">
+		<div class="tabview">
+			<ul class="tabpanel">
+				<li class="main-right-tab-curr"><a href="#">订单详情</a></li>
+			</ul>
+		</div>
+		<div class="controlpanel" id="controlpanel">
+			<form action="order.php?ac=create&type=charge" method="post" id="addorderinfo">
+				<div class="formpanel">
+					<dl class="formpanel-itemlist">
+						<dt><em class="required">*</em>订单来源：</dt>
+						<dd>店面</dd>
+						<dt>订单号：</dt>
+						<dd>1000</dd>
+						<dt>订单状态：</dt>
+						<dd>已出库</dd>
+						<dt>客户姓名：</dt>
+						<dd>---</dd>
+						<dt>商品详情：</dt>
+						<dd>
+							<div class="buyproducts-wrap">
+								<div class="buyproducts">
+									<div class="buyproducts-head"> <span class="buyproducts-head-1">商品名称</span> <span class="buyproducts-head-2">单价</span> <span class="buyproducts-head-3">数量</span> <span class="buyproducts-head-4">每件优惠</span> <span class="buyproducts-head-5">操作</span> </div>
+									<div class="buyproducts-main" id="buyproduct-main" style="display:block;">
+										<ul class="buyproducts-main-list" id="buyproduct-main-list" style="display:block;">
+											<li>
+												<div class="buyproducts-main-item buyproducts-main-1">手机充电器</div>
+												<div class="buyproducts-main-item buyproducts-main-2">15.00</div>
+												<div class="buyproducts-main-item buyproducts-main-3">1</div>
+												<div class="buyproducts-main-item buyproducts-main-4">1</div>
+												<div class="buyproducts-main-item buyproducts-main-5">-</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="chargeinfo-wrap" id="chargeInfo" style="display:block;">
+								<div class="chargeinfo">
+									<h1><b>虚拟类充值缴费商品补充信息</b></h1>
+									<ul class="chargeinfo-list">
+										<li>
+											<div class="chargeinfo-list-item-n">手机号码/帐号：</div>
+											<div class="chargeinfo-list-item-r">135 4567 9128</div>
+										</li>
+										<li>
+											<div class="chargeinfo-list-item-n"><em class="required">*</em>面值：</div>
+											<div class="chargeinfo-list-item-r">50元</div>
+											<div class="chargeinfo-list-item-n"><em class="required">*</em>MY进价：</div>
+											<div class="chargeinfo-list-item-r">49.55元</div>
+										</li>
+										<li>
+											<div class="chargeinfo-list-item-n">相关信息：</div>
+											<div class="chargeinfo-list-item-r">---</div>
+										</li>
+										<li>
+											<div class="chargeinfo-list-item-n">MY备注：</div>
+											<div class="chargeinfo-list-item-r">---</div>
+										</li>
+										<li>
+											<div class="chargeinfo-list-item-n">充值状态：</div>
+											<div class="chargeinfo-list-item-r" id="chargeState">尚未充值</div>
+										</li>
+									</ul>
+									<div class="chargeinfo-btn"><button id="chargeinfo-setState" data-state="1">设为已充值状态</button></div>
+								</div>
+							</div>
+						</dd>
+						<dt>订单备注：</dt>
+						<dd>
+							<textarea class="formpanel-remark" name="remark"></textarea>
+						</dd>
+						<dt></dt>
+						<dd></dd>
+						<dt><b>总件数：</b></dt>
+						<dd><span class="n-sum" id="order-count">0</span>件</dd>
+						<dt>总金额：</dt>
+						<dd><span class="n-amount" id="order-amount">0.00</span>元</dd>
+						<dt>总优惠金额：</dt>
+						<dd><span class="n-amount" id="order-totaldiscount">0.00</span>元=商品优惠<span class="n-amount" id="order-dmount">0.00</span>元+订单优惠<span class="n-amount">
+							<input value="0.00" id="order-dorder" />
+							</span>元</dd>
+						<dt><b>应支付：</b></dt>
+						<dd><span class="n-amount n-big" id="order-actualamount">0.00</span>元</dd>
+						<dt><em class="required">*</em><b>收银：</b></dt>
+						<dd><span class="n-amount n-big">
+							<input value="50.00" name="receipts" id="order-receipts" />
+							</span>元</dd>
+						<dt><b>找零：</b></dt>
+						<dd><span class="n-amount n-big" id="order-change">30.00</span>元</dd>
+					</dl>
+					<p class="formpanel-btn">
+						<input type="submit" value="确认订单信息" id="order-submit02" />
+					</p>
+				</div>
+				商品总数<input type="text" value="0" name="count" /><!--商品总数--><br>
+
+				商品总价<input type="text" value="0" name="amount" /><!--商品总价--><br>
+
+				订单内所有商品优惠金额总和<input type="text" value="0" name="damount" /><!--订单内所有商品优惠金额总和--><br>
+
+				订单优惠金额<input value="0" name="dorder" id="dorder" /><!--订单优惠金额--><br>
+
+				订单总优惠金额<input type="text" value="0" name="totaldiscount" /><!--订单总优惠金额--><br>
+
+				应支付<input type="text" value="0" name="actualamount" /><!--应支付--><br>
+
+				充值类订单信息<input type="text" value="" name="chargeInfo" /><!--充值类订单信息--><br>
+
+				购买的商品列表<input type="text" value="" name="plist" /><!--购买的商品列表--><br>
+
+				收银<input type="text" value="0" name="receipts" /><!--收银--><br>
+
+				找零<input type="text" value="0" name="change" /><!--找零--><br>
+
+			</form>
+		</div>
+	</div>
+</div>
+<script src="js/order-show.js"></script>
+</body>
+</html>
